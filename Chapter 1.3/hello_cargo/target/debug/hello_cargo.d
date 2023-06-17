@@ -1,0 +1,1 @@
+C:\Users\janni\OneDrive\Dokumente\Projects\Rust\Rust-Practice\Chapter\ 1.3\hello_cargo\target\debug\hello_cargo.exe: C:\Users\janni\OneDrive\Dokumente\Projects\Rust\Rust-Practice\Chapter\ 1.3\hello_cargo\src\main.rs

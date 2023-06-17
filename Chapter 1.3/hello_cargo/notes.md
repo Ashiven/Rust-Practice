@@ -1,0 +1,4 @@
+- `cargo new hello_cargo` to create new project with cargo
+- `cargo build` to build and compile the project (binary saved in \target\debug) but not run it
+- `cargo run` to build and compile and run the project
+- `cargo check` to check whether the project code would compile but not compile it
