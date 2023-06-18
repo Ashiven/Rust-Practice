@@ -1,0 +1,17 @@
+- `let mut guess = String::new()` we define a new mutable variable guess which gets assigned a new empty instance of type String with the new() function implemented for the type String
+- `.read_line` calls the read_line method on the stdin handle to get user input and store it in guess whose reference we are passing to read_line
+- references are immutable by default which is why we have to pass `&mut guess` instead of `&guess`
+- `.expect("Failed to read line.")` read_line will return a `Result` enum which can be `Err` or `Ok` and based on that will either crash the program or pass the value of `Ok` and return it
+- we are building a `binary crate` and dependencies are `library crates`
+- `cargo update` to ignore the versions in `Cargo.lock` and update dependencies to their newest version
+- `use rand::Rng` we put the `Rng` trait of `rand` in the scope to be able to use its methods relating to random number generation
+- `rand::thread_rng` is a function that gives us a a number generator that is local to the current thread and seeded by the OS
+- `.gen_range(1..=100)` is brought into scope through the `Rng` trait and we are calling that on the random number generator 
+- `1..=100` is a range expression we pass to `gen_range` to gen a number between 1 and 100
+`cargo doc --open` builds documentation for all dependencies and opens them in the browser
+- `use std::cmp::Ordering` we bring the `Ordering` type into the scope which is an enum with the variants `Less`, `Greater`, `Equal`
+- `cmp` compares two values and can be called on anything that can be compared; it takes a reference to what is being compared with and returns one variant of the `Ordering` enum
+- `match` uses `arms` to decide on an action based on the value it has been given
+- `let guess: u32` we shadow the existing `guess` variable with one that is of type `u32` and bind it to the value `guess.trim().parse()` we trim whitespaces and newlines and parse converts the string to the specified `u32` and we catch errors with the last part `.expect()`
+- `loop {}` creates an infinite loop
+- `Ok(num)` is a success result enum with the value of the number we entered and `Err(_)` is a failed enum with whatever error value. We let guess be the value of the Ok enum or continue the loop when encountering an error
