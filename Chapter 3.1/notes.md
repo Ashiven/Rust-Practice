@@ -1,0 +1,5 @@
+- there are constants which are always immutable, declared with `const`
+- convention for naming constants is all uppercase with underscores
+- there is shadowing for variables already declared, with for example `let x = 12`
+- for example `let spaces = "  "; let spaces = spaces.len();`
+- the good thing there is that we don't need to worry about changing types since we are shadowing
