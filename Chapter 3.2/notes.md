@@ -1,0 +1,8 @@
+- when there are multiple possible types, you need to add type annotations
+- decimals can be declared with underscores for readability `10_000` == `10000`
+- Hex: `0xff` Octal: `0o77` Binary: `0b1111_0000` Byte: `b'A'`
+- in case of overflows Rust uses wrapping so a `u8` with value `256` takes on the value `0` and `257` the value `1`
+- char type can be declared as follows `let cat: char = '😻';`
+- tuples can be declared like this `let tup: (i32, f64, u8) = (500, 6.4, 1);` and destructured like that `let (x, y, z) = tup;` or `let x = tup.0; let y = tup.1;`
+- arrays as follows `let arr: [i32; 4] = [1, 2, 3, 4];` here `i32` is the type of elements and `4` the number of elements
+- arrays are allocated on the stack and values can be accessed like this `let first = arr[0];`
