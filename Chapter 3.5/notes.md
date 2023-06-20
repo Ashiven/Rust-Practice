@@ -1,0 +1,8 @@
+- conditions must always be of type `bool` so `if number == 0` works but `if number` does not because `number` is not of type `bool`
+- there are `if`, `else if` and `else`
+- for loops there are `loop`, `while`, and `for`
+- `loop` runs the code inside forever or until its explicitly told to stop for example with `break`
+- there is a way to label specific loops like this `'counting_up: loop {...}` which enables you to break out of out loops even inside of an inner loop like this `break 'counting_up;`
+- `while` pretty much the same as in C with conditional statements working as previously mentioned
+- `for` we can use syntax similar to python like `for element: i32 in arr {...}`
+- we can loop through a range with `for number in (1..4)`
