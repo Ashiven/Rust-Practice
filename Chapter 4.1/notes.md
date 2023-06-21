@@ -1,0 +1,13 @@
+- safety is defined as the absence of undefined behaviour
+- Rust uses `frames` which are mappings of variables to values in a scope. 
+- a function call could add a `frame` to the `stack` and that `frame` will be freed after the function returns
+- the `heap` is a place in memory where data can live indefinitely, without being tied to a `stack frame`
+- we can use a `Box` to store data on the `heap` which will then store a pointer to that data in the `stack frame` 
+- an example `let a = Box::new([0; 1_000_000]); let b = a;`. Here `a` will store a `pointer` to the array in the `heap` and the `pointer` will then be copied into `b`
+- Rust does not allow for manual memory management i.e. `malloc` or `free`
+- if memory is allocated on the heap by a function, as soon as the functions stack frame is freed, the allocated heap memory will be freed with it
+- example `fn main() { let a = 4; make_and_drop(); } fn make_and_drop() { let a_box = Box::new(5); }` 
+- here the `main frame` will have `a 4` and after calling `make_and_drop()` there will be a `make_and_drop frame` with `a_box *` with `*` pointing to the `Box` on the `heap`. after the function call ended, the `make_and_drop frame` is deallocated and with it the `Box` on the heap will be freed aswell
+- now there is the principle of `ownership` which denotes that there is only ever one specific owner of a `Box` or such things, so Rust will clear the `owners` allocated memory
+- example `let a = Box::new([0; 1_000_000]); let b = a;` here the `ownership` of the box is with `a` at first and then gets moved over to `b` and when the stack frame is freed, the `Box` that is owned by `b` will also be cleared. if there were no `ownership` then Rust could accidentally try to free the memory of the `Box` twice.
+- if a variable `x` moves ownership of heap data to another variable `y`, then `x` cannot be used after the move
