@@ -1,0 +1,14 @@
+- There are `references` which are also called `non-owning pointers` 
+- when passing references to a function, ownership will not be transfered to the functions variables, instead they will point to the calling variables
+- many functions already dereference implicitly, which is why we will not see the dereference operator as often
+- vectors also `Vec` store their elements on the heap and have a variable length therefore
+- `aliasing` can happen when there are two references to the same element on the heap for example, and that data is modified or moved elsewhere by some operation, leaving at least one reference to point to invalid memory
+- principle `never alias and mutate data at the same time`
+- variables have `Read`, `Write`, and `Own` permissions on their data (at compile time)
+- by default variables have `Read` and `Own` permissions and with `let mut` they also have `Write` permissions
+- when a reference is created it temporarily `borrows` the permissions of the thing it references and leaves that without its permissions for that duration, meaning that the original thing cannot be modified during that interval
+- if you want a reference that has write permissions upon being dereferenced you need to use `let num: &mut i32 = &mut vec[2]`
+- with mutable references the borrowee loses all its permissions, while before it maintained `Read` permissions at least
+- another principle `data must outlive any references to it`
+- there is also a `Flow` permission for input/output references for example in a function
+- this permission ensures that rust knows that references as inputs or outputs will not be invalidated 
