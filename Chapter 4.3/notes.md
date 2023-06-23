@@ -1,0 +1,7 @@
+- passing an immutable reference to a function, and then trying to modify it results in compiler errors
+- this is because the function does not have write permission, unless it received a mutable reference
+- a way to still return a modified version of the passed reference, is to clone the input and then modify the clone and return it
+- principle `if a value doesn't own heap data, it can be copied without a move`
+- `i32` does not own heap data and can be copied without a move
+- `String` does own heap data and can therefore not be copied without a move
+- `&String` does not own heap data and can be copied without a move
