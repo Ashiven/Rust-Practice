@@ -1,0 +1,7 @@
+- `slices` reference a contiguous sequence of elements in a collection rather than the whole collection
+- a `slice` can be used like so `let s = String::from("hello world"); let slice: &str = &s[0..5];`
+- `let slice: &str = &s[0..5];` is equivalent to `let slice: &str = &s[..5];`
+- `let len = s.len(); let slice: &str = &s[5..len];` is equivalent to `let slice: &str = &s[5..];`
+- `let len = s.len(); let slice: &str = &s[0..len];` is equivalent to `let slice: &str = &s[..];`
+- we can also give our function a slice `&str` as input type instead of a reference to a String `&String`, because `&str` will also accept normal references to Strings
+- `slices` are also called `fat pointers`, which store a field `len` in addition to the pointer

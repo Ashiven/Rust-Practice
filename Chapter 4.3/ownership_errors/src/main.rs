@@ -1,3 +1,6 @@
+fn main() {
+    println!("Hello World");
+}
 /*
 fn main() {
     let name = vec![String::from("Ferris")];
@@ -14,7 +17,7 @@ fn stringify_name_with_title(name: &Vec<String>) -> String {
 --name is an immutable reference, but push needs write permissions, which it would have with a mutable reference--
 --push would reallocate memory for the name vector and invalidate the first reference in main--
 */
-
+/*
 fn main() {
     let name = vec![String::from("Ferris")];
     let first = &name[0];
@@ -27,8 +30,9 @@ fn stringify_name_with_title(name: &Vec<String>) -> String {
     full.push_str(" Esq.");
     full
 }
-//--here we first create a 'clone' of the input via let mut full = name.join(" ");--
-//--then we modify the clone and return it, thus not having to modify the original input--
+--here we first create a 'clone' of the input via let mut full = name.join(" ");--
+--then we modify the clone and return it, thus not having to modify the original input--
+*/
 
 /*
 fn add_big_strings(dst: &mut Vec<String>, src: &[String]) {
