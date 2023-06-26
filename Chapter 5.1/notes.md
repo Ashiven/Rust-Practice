@@ -1,0 +1,1 @@
+- `structs` are useful(see code)
