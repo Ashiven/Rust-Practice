@@ -1,0 +1,2 @@
+-  we give the struct the `Debug` trait with the line `#[derive(Debug)]` so we can print with `{:#?}`
+-  we can also print values with the `!dbg` macro
