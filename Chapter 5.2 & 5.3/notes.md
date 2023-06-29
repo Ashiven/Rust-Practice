@@ -1,0 +1,12 @@
+-  we give the struct the `Debug` trait with the line `#[derive(Debug)]` so we can print with `{:#?}`
+-  we can also print values with the `!dbg` macro
+-  `Methods` are similar to functions, but they are declared within the `scope` of a `struct`
+-  `Methods` are defined in the `impl` block associated with a `struct`
+-  The first parameter for `Methods` is always a reference to the type that the `impl` block is for, which will be the alias `&self`
+-  `Methods` can take `ownership ( No reference )` of `self`, `mutably borrow ( &mut )` `self`, or `immutably borrow ( & )` `self`
+-  an `impl` block can also contain `associated functions`, which don't require an instance of the type to work with and therefore don't take the `self` parameter
+-  They are often used as constructors
+-  `associated functions` are called with the `::` syntax
+-  it is allowed to split up the `impl` block for a `struct` into multiple `impl` blocks
+-  calling a method that takes `ownership` with a `self` parameter, will move the input `struct` unless it implements `Copy`, and you are unable to use it afterwards
+-  a `struct` can be made to derive the `Clone` and `Copy` traits, and if they don't contain owned data, like `String`, it will become possible to implement `Methods` that require `ownership`, while passing `references` as arguments
