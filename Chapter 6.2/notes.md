@@ -1,0 +1,7 @@
+-  `match` is like a case-switch in C
+-  each `arm` consists of a pattern and some code to be executed if the pattern is `matched`
+-  more specifically the right side of each `arm` is an `expression`
+-  it is also possible to use the data inside of an `enum` that is being `matched`
+-  it is important to cover all possibilities in a `match`
+-  we can use the `other` keyword to catch everything we have not explicitly written out
+-  if we don't need to use the value of the `match` we can use `_` instead of `other`
