@@ -1,0 +1,3 @@
+-  we can use `if let` if we want to match against one value and do something only for that value
+-  it is more concise than adding the `_ => ()` at the end of the `match` expression that we could use otherwise
+-  if we add an `else` after the `if let`, it is the same as the block of code that would follow the `_` arm in the equivalent `match`
