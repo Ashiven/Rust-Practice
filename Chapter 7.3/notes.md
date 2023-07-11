@@ -1,0 +1,11 @@
+-  we can use `paths` to tell Rust where to find items in the `module tree`
+-  there are `relative paths`, starting at the current module, and `absolute paths`, starting at the `crate root`
+-  paths are separated by double colons `::`
+-  starting absolute paths with `crate` is the equivalent to starting a path in the filesystem with `/`
+-  `parent modules` can not use the items inside of `child modules`
+-  `child modules` on the other hand, can use the items of their `ancestor modules`
+-  items can be made public by prefixing the `pub` keyword
+-  using `super` at the start of a path is the equivalent to starting a path in the filesystem with `..`
+-  `pub` can also be used to make `structs` and `enums` public
+-  in contrast to `enums`, by default all of the fields of a `struct` are `private` and would have to be made `public` explicitly
+-  if we put `pub` in front of an `enum` all of it's variants will be publically accessible
