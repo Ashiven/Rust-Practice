@@ -1,0 +1,10 @@
+-  if we don't want to write out a path every time we want to use a function, we can bring the function/path into scope with the `use` keyword
+-  for example `use crate::front_of_house::hosting;` brings the public module `hosting` into scope, where we can then call `hosting::add_to_waitlist();`
+-  the `use` is only valid in the scope where it occurs
+-  it is a convention to bring the `parent module` into scope for functions, and to bring `structs` and `enums` into scope directly
+-  there is also an `as` keyword which we can use to rename things that we bring into scope with `use`
+-  for example `use std::io::Result as IoResult`
+-  when using `pub use`, we ensure that others accessing our module are also able to access the thing we have brought into scope with `use`
+-  we can bring multiple things from the same crate or module into scope with the syntax `use std::{cmp::Ordering, io};`
+-  or also `use std::io; use std::io::Write;` -> `use std::io{self, Write};`
+-  we can bring all public items of a path into scope as follows `use std::collections::*;`
