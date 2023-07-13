@@ -1,0 +1,3 @@
+-  it is good practice to move large `module` definitions into their own separate files
+-  in the code example we use `mod front_of_house;` inside of the `crate root` to contain the module in `src/front_of_house.rs`
+-  whereas when we used `mod hosting;` inside of `front_of_house.rs`, we had to put `hosting.rs` inside of the folder `front_of_house` such that the file structure will match the `module tree`
