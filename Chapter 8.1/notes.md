@@ -1,0 +1,2 @@
+-  there is a macro `vec!` for creating new vectors
+-  it is good practice to combine `vectors` with `enums` if you need a vector holding different types
