@@ -1,0 +1,5 @@
+-  it is important to differentiate between `string slices` and `Strings`
+-  `Strings` are mutable, owned, and growable
+-  `Strings` are actually wrappers around `Vectors` of bytes
+-  indexing `strings` in rust is not supported because they are vectors of utf-8 encoded bytes
+-  some characters require more than 1 byte for their encoding
