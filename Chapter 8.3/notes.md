@@ -1,0 +1,2 @@
+-  to use a `hashmap` we first have to bring it into scope with `use std::collections::HashMap;`
+-  owned values like `Strings` will be moved when they are added to a `hashmap` and transfer their ownership to the `hashmap`
