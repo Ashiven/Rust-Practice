@@ -1,0 +1,3 @@
+-  you can decide whether a program should `abort` or `unwind` on `panic`
+-  when a program `aborts` the cleaning up is left to the operating system, when it `unwinds` rust has to do the cleaning up
+-  we can see the backtrace as follows: `RUST_BACKTRACE=1 cargo run`
