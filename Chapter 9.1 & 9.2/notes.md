@@ -1,0 +1,8 @@
+-  you can decide whether a program should `abort` or `unwind` on `panic`
+-  when a program `aborts` the cleaning up is left to the operating system, when it `unwinds` rust has to do the cleaning up
+-  we can see the backtrace as follows: `RUST_BACKTRACE=1 cargo run`
+-  if we want to do error handling we would use the `Result` enum
+-  we can use `unwrap` or `expect` for primitive error handling, and `match` or `unwrap_or` with `closures` for more detailed error handling
+-  propagating errors to a calling function is made very easy with the ? operator
+-  when the result of the operation is Ok the function continues, and the value inside of Ok will be used, when it is Err, the Err will be returned from the function
+-  it is important to note that the return type of the function where we use the ? operator is `Result`, `Option`, or another type implementing `FromResidual`
