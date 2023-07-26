@@ -1,0 +1,3 @@
+-  we use generics for function signatures or structs which can then be used with many concrete types
+-  the convention for naming of generic types are uppercase letters like `T`
+-
