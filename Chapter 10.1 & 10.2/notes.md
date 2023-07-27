@@ -1,0 +1,11 @@
+-  we use generics for function signatures or structs which can then be used with many concrete types
+-  the convention for naming of generic types are uppercase letters like `T`
+-  `traits` can be used to specifiy the behaviour that a specific `type` should have
+-  every `type` implementing a `trait` must provide it's own custom behaviour for the methods that the `trait` defines
+-  implementing `traits` on types is similar to creating methods on them with the difference that we use the `for` keyword and the signatures of the methods are strictly defined inside of the `trait`
+-  traits have to be brought into scope in addition to the types being brought into scope
+-  it is also possible to define a method body inside of a `trait`, which is called `default implementation`
+-  to implement this kind of `trait` for a type, we do the following `impl DefaultTrait for SomeType {}`
+-  a default implementation in a `trait` can also call methods in a `trait` that have to be implemented
+-  default methods can also be overwritten by simply implementing the method on a `type`
+-
