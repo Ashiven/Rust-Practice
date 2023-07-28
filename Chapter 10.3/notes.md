@@ -1,0 +1,8 @@
+-  when we want to have a `reference` on something that does not live as long as the `reference` to it, i.e. we return a `reference` to a value that has been declared in a scope, we need to use `lifetimes`
+-  we can declare `lifetimes` starting with an apostrophe after the reference ampersand `&'a str`
+-  `lifetimes` of return values always need to relate to the `lifetimes` of the input parameters
+-  structs that use `references`, i.e. `string slices`, need to specify `lifetime` parameters
+-  in some cases where `lifetimes` are technically required, the rust compiler is smart enough that you don't need to explicitly write them out
+-  `lifetimes` don't have to be annotated in `method` definitions very often for that reason
+-  there is another special `lifetime` called `'static`, which denotes that the reference can live for the entire duration of the program
+-  all string literals have this lifetime
