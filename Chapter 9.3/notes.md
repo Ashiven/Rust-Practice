@@ -1,4 +1,3 @@
 -  it is important to know when to use `panic!` and when to use `Result` for recoverable errors
 -  when you have a piece of code that you expect to return a `Result` that will not be an `Err` variant, it is okay to use `unwrap` or `expect`
 -  `panic!` should be used when continuing a code beyond that point could be insecure or harmful, i.e. accessing out-of-bounds memory
--
