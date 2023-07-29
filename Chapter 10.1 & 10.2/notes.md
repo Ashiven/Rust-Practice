@@ -8,4 +8,4 @@
 -  to implement this kind of `trait` for a type, we do the following `impl DefaultTrait for SomeType {}`
 -  a default implementation in a `trait` can also call methods in a `trait` that have to be implemented
 -  default methods can also be overwritten by simply implementing the method on a `type`
--
+
