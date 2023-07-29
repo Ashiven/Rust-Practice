@@ -4,4 +4,3 @@
 -  there is an `Option` `enum` in the standard library which is used in the scenario where a value could be something or nothing
 -  for example when accessing the first item in a list that could be empty
 -  when we have a `Some` value, we know that a value is present, whereas when we have a `None` value we don't
--
