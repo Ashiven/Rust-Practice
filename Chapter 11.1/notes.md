@@ -1,0 +1,7 @@
+-  to write tests add the attribute `#[cfg(test)]` above the module for testing, and add the attribute `#[test]` above every test
+-  we can run the tests with `cargo test`
+-  there are some very helpful macros like `assert!`, `assert_eq!`, and `assert_ne!`
+-  we can also add custom error messages into the macros like this `assert!(result.contains("Carol"), "Greeting did not contain name, value was `{}`", result);`
+-  there is a `should_panic` attribute that we can add to our test when we expect the code to panic
+-  `should_panic` can be made more verbose like so `#[should_panic(expected="less than or equal to 100")]`, where `expected` is a substring of the panic message we receive
+-
