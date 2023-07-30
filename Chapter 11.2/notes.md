@@ -1,0 +1,9 @@
+-  you can control the level of concurrency of your test runs
+-  by default all tests are executed in parallel on separate threads
+-  `cargo test -- --test-threads=1` if the tests should run sequentially without parallelism
+-  `cargo test -- --show-output` if you want to see `stdout` for passing tests in addition to failing tests
+-  `cargo test [testname]` to run only a particular test
+-  `cargo test [substring]` to run all test that contain the `substring` in their name
+-  annotating a test with the `[#ignore]` attribute makes it so the test gets skipped
+-  `cargo test -- --ignored` to run evey ignored test
+-  `cargo test -- --include-ignored` to run every test, including ignored ones
