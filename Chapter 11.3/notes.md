@@ -1,0 +1,5 @@
+-  integration tests can be achieved by adding a `tests` directory at the top level of the project directory
+-  there is no need for the annotation `#[cfg(test)]` for the files inside the `tests` directory
+-  `cargo test --test integration_test` to run all the tests inside of `tests/integration_test.rs`
+-  if we want to create a module to use inside of the `tests` directory, we have to create it like this: `tests/[modulename]/mod.rs`
+-  integration tests are meant to test the functions defined in `src/lib.rs`, which are called by the main program in `src/main.rs`
