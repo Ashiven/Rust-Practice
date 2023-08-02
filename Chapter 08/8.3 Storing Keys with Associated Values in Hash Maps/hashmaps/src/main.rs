@@ -1,3 +1,5 @@
+#![allow(unused_variables)]
+#![allow(dead_code)]
 use std::collections::HashMap;
 fn main() {
     let mut scores = HashMap::new();
@@ -6,10 +8,10 @@ fn main() {
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
 
-    //let team_name = String::from("Blue");
+    let team_name = String::from("Blue");
 
     //retrieving values
-    //let score = scores.get(&team_name).copied().unwrap_or(0);
+    let score = scores.get(&team_name).copied().unwrap_or(0);
 
     //iterating over key-value pairs
     for (key, value) in &scores {

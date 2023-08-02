@@ -1,3 +1,5 @@
+#![allow(unused_variables)]
+#![allow(dead_code)]
 fn main() {
     let first = String::from("Ferris");
     let full = add_suffix(first);

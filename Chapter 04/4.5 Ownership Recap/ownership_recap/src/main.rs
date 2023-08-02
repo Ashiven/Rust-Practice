@@ -1,3 +1,5 @@
+#![allow(unused_variables)]
+#![allow(dead_code)]
 fn main() {
     let words = vec!["hello".to_string()];
     let d = new_document(words);

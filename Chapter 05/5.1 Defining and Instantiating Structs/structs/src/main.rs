@@ -1,4 +1,6 @@
-/*
+#![allow(unused_variables)]
+#![allow(dead_code)]
+
 // this is a normal struct
 struct User {
     active: bool,
@@ -48,7 +50,7 @@ fn build_user(email: String, username: String) -> User {
         sign_in_count: 1,
     }
 }
-*/
+
 fn main() {
     println!("Hello World");
 }

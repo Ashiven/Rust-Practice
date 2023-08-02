@@ -1,4 +1,6 @@
-/*
+#![allow(unused_variables)]
+#![allow(dead_code)]
+
 fn main() {
     let dice_roll = 9;
     match dice_roll {
@@ -48,7 +50,7 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
         Some(i) => Some(i + 1),
     }
 }
-*/
+
 fn main() {
     println!("Hello World");
 }

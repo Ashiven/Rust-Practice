@@ -1,4 +1,6 @@
-/*
+#![allow(unused_variables)]
+#![allow(dead_code)]
+
 // V4 and V6 are of type IpAddrKind
 enum IpAddrKind {
     V4(String),
@@ -38,7 +40,7 @@ fn main() {
     let absent_number: Option<i32> = None;
 }
 fn route(ip_kind: IpAddrKind) {}
-*/
+
 fn main() {
     println!("hello world");
 }

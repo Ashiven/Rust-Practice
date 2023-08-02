@@ -1,3 +1,5 @@
+#![allow(unused_variables)]
+#![allow(dead_code)]
 fn main() {
     let m1 = String::from("Hello");
     let m2 = String::from("World");

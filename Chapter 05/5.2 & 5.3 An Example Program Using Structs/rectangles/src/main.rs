@@ -1,3 +1,6 @@
+#![allow(unused_variables)]
+#![allow(dead_code)]
+
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -6,18 +9,17 @@ struct Rectangle {
 
 // we are not modifying self so &self will do
 impl Rectangle {
-    /*
     fn area(&self) -> u32 {
         self.width * self.height
     }
     fn width(&self) -> bool {
         self.width > 0
     }
-    */
+
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }
-    /*
+
     fn square(size: u32) -> Self {
         Self {
             width: size,
@@ -33,7 +35,6 @@ impl Rectangle {
             height: self.height.max(other.height),
         }
     }
-    */
 }
 /*
 fn main() {

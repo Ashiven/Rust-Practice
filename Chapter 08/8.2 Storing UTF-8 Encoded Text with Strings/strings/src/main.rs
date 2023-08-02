@@ -1,4 +1,6 @@
-/*fn main() {
+#![allow(unused_variables)]
+#![allow(dead_code)]
+fn main() {
     let data = "initial contents";
 
     //converting string literals to strings
@@ -46,7 +48,7 @@
     for b in "Здравствуйте".bytes() {
         println!("{b}");
     }
-}*/
+}
 fn main() {
     println!("hello world");
 }
