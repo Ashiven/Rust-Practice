@@ -2,4 +2,4 @@
 -  we use the `--` to indicate that the arguments are for the `binary` rather than for `cargo`
 -  larger programs should start moving their logic to a library file `src/lib.rs`
 -  `main.rs` should: call command line parsing logic with args, set up other config, call a `run` function in `lib.rs`, handle errors returned by `run`
--
+-  errors can be printed to `stdout` with `eprintln!`
