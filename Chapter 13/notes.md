@@ -1,0 +1,4 @@
+-  `Closures` are anonymous functions that can be saved in a variable or passed to other functions
+-  they can capture values from the scope in which they are defined
+-  `Closures` usually don't require type annotations, unlike functions
+-  type annotations are possible though, if one wants to put them in
