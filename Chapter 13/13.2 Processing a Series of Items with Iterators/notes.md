@@ -1,0 +1,2 @@
+-  `iterators` can be consumed via the `next()` method declared in the `Iterator trait`
+-  on top of the method `iter()` which returns immutable references, we can also use `into_iter()` which takes ownership, and `iter_mut()` to get mutable references
