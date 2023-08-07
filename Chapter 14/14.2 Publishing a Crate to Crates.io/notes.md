@@ -1,0 +1,8 @@
+-  you can publish your own crates on Crates.io
+-  there are `documentation comments` that start with `///` instead of `//`, and they support markdown notation
+-  these are usually placed above the function they are documenting
+-  we can view the generated documentation via `cargo doc --open`
+-  common sections in a function's documentation are **Examples**, **Errors**, **Panics**, **Safety**
+-  `cargo test` will also run the code examples in the documentation
+-  `//!` is for comments about the crate or module itself and typically goes at the start of a module
+-  having set up an account on crates.io and added your api key locally via `cargo login [api-key]`, you can publish a crate via `cargo publish`
