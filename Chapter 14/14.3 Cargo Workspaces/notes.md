@@ -1,0 +1,7 @@
+-  `workspaces` can be used to manage sets of related packages
+-  this is useful when we have a binary that depends on multiple libraries for example
+-  we can specify a `workspace` by adding a **Cargo.toml** file in our `workspace` that contains the names of the crates under `[workspace]\n members = ["crate-name"]`
+-  running `cargo build` in the `workspace` folder compiles all crates into the `target` directory
+-  when we want to run a specific `package` in the `workspace`, we use `cargo run -p [package-name]`
+-  running `cargo test` in a `workspace` will run the tests for all `crates` in the `workspace`
+-  for particular testing, we use `cargo test -p [package-name]`
