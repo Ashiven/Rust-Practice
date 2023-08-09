@@ -5,3 +5,5 @@
 -  when we want to run a specific `package` in the `workspace`, we use `cargo run -p [package-name]`
 -  running `cargo test` in a `workspace` will run the tests for all `crates` in the `workspace`
 -  for particular testing, we use `cargo test -p [package-name]`
+-  `cargo install` can be used to install binaries from crates.io
+-  `cargo --list` shows all extensions and commands that can be used with `cargo`
