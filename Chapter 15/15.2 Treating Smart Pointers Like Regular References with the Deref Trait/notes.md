@@ -1,0 +1,3 @@
+-  the behavior of the dereference operator `*` can be customized by implementing the `Deref` trait for smart pointers
+-  implementing the `Deref` trait for a type allows us to simply dereference references to instances of that type via the `*` operator
+-  there is also a `DerefMut` trait for customizing the dereference behavior of mutable references
