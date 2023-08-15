@@ -1,0 +1,4 @@
+-  `interior mutability` allows for mutation of data even when there are immutable references to it
+-  `RefCell<T>` is useful when you're sure your code follows the borrowing rules but the compiler is unable to understand and guarantee that
+-  like `Rc<T>` it is intended for single-threaded applications
+-  using `RefCell<T>` in combination with `Rc<T>` allows you to get a value with multiple owners that can also be mutated
