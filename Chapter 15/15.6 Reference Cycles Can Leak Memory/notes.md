@@ -1,0 +1,1 @@
+-  it is difficult but not impossible to create memory leaks in rust
