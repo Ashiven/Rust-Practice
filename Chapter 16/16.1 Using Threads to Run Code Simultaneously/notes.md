@@ -1,0 +1,5 @@
+-  threads can be used via `std::thread`
+-  when the main thread completes, all spawned threats shut down, whether they have finished or not
+-  if you want a spawned thread to terminate, you can use the threads return, which is a `handle`, and call `handle.join().unwrap()`
+-  what `join` does, is to block the currently running thread until the threat represented by the `handle` terminates
+-  it is often important to use `move closures` with spawned threads (see code examples for further elaboration)
