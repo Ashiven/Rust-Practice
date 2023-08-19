@@ -1,0 +1,3 @@
+-  `message passing` means that threads communicate with one another to faciliate concurrency
+-  to create a `channel` that threads can use to communicate, use `std::sync::mpsc` (multiple producer single consumer)
+-  for further explanations on how to use `channels` see the code examples
