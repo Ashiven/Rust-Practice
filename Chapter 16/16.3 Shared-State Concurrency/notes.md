@@ -1,0 +1,2 @@
+-  `shared memory concurrency` means that multiple threads can own the same data, while before when a value was passed down a channel it also transferred ownership
+-  this is achieved with `mutexes` or mutual exclusions
