@@ -1,0 +1,3 @@
+-  `structs` and `enums` are the object equivalents in rust because they contain data and methods can be implemented on them
+-  rust objects also meet the standard of `encapsulation`, meaning that you can decide which parts of an object are supposed to be part of it's public API
+-  `default implementations` on `traits` are the most similar thing to `inheritance` in rust
