@@ -1,0 +1,3 @@
+-  we can use `trait objects` in place of generic or concrete types
+-  `trait objects` point to an instance of a type implementing the specified trait and a table for looking up methods on that type at runtime
+-  `trait objects` differ from `generic types` in that a `generic type` parameter can only be substituted with one concrete type at a time, while `trait objects` allow for multiple concrete types to fill in at for the `trait object` at runtime
