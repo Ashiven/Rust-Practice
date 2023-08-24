@@ -1,0 +1,1 @@
+-  see code for a practical implementation of an object oriented design pattern
