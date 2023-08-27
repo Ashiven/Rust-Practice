@@ -1,0 +1,5 @@
+-  there are patterns that are called `refutable`, meaning they will not match in every circumstance
+-  for example, `if let Some(x) = a_value` will not match if `a_value` is `None`
+-  function parameters, `let` statements, and `for` loops can only accept `irrefutable patterns`
+-  for example, `let Some(x) = some_option_value` will not compile because the pattern is `refutable`
+-  `match` arms have to use `refutable` patterns except for the last arm, which should use an `irrefutable` pattern
