@@ -1,0 +1,2 @@
+-  there are various syntax that can be used for pattern matching
+-  examples and explanations provided in the code
