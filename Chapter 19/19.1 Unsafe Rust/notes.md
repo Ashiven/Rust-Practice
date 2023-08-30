@@ -1,0 +1,9 @@
+-  unsafe code allows five things that are not possible in normal rust
+-  these things are: `dereferencing raw pointers`, `calling unsafe methods`, `accessing or modifying mutable static variables`, `implementing unsafe traits`, `accessing fields of unions`
+-  it is good practice to implement a safe API for interacting with your unsafe code
+-  unsafe rust introduces the concept of `raw pointers` with the following syntax `*const T` and `*mut T`
+   -  `raw pointers` can ignore borrowing rules by having both immutable and mutable pointers or multiple mutable pointers to the same location
+   -  they are not guaranteed to point to valid memory
+   -  they are allowed to be null
+   -  they don't implement automatic cleanup
+-  rust can interact with and use functions from other languages via the `foreign function interface` by using the `extern` keyword
