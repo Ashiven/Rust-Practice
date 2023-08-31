@@ -1,0 +1,2 @@
+-  `associated types` can be used in the definitions of a trait as placeholder for a type, which the implementor of the method will specify
+-  generic type parameters in trait definitions can have a `default concrete type` specified, which makes it so that implementors of the trait don't need to specify a type
