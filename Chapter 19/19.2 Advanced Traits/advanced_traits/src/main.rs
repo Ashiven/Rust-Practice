@@ -70,9 +70,116 @@ impl Add<Meters> for Millimeters {
     }
 }
 
+// implementing multiple traits with the same method name
+trait Pilot {
+    fn fly(&self);
+}
+
+trait Wizard {
+    fn fly(&self);
+}
+
+struct Human;
+
+impl Pilot for Human {
+    fn fly(&self) {
+        println!("This is your captain speaking");
+    }
+}
+
+impl Wizard for Human {
+    fn fly(&self) {
+        println!("Up!");
+    }
+}
+
+impl Human {
+    fn fly(&self) {
+        println!("*waving arms furiously*");
+    }
+}
+
+trait Animal {
+    fn baby_name() -> String;
+}
+
+struct Dog;
+
+impl Dog {
+    fn baby_name() -> String {
+        String::from("Spot")
+    }
+}
+
+impl Animal for Dog {
+    fn baby_name() -> String {
+        String::from("puppy")
+    }
+}
+
+// if we want to define a trait that can only be implemented on types that implement another trait
+// (sort of a prerequisite to be able to implement this trait), we can use this syntax (specify a supertrait)
+
+use std::fmt;
+
+// this means that OutlinePrint can only be implemented for types that also implement the fmt::Display trait
+trait OutlinePrint: fmt::Display {
+    fn outline_print(&self) {
+        let output = self.to_string(); // to_string() is implemented for any type implementing the fmt::Display trait
+        let len = output.len();
+        println!("{}", "*".repeat(len + 4));
+        println!("*{}*", " ".repeat(len + 2));
+        println!("* {} *", output);
+        println!("*{}*", " ".repeat(len + 2));
+        println!("{}", "*".repeat(len + 4));
+    }
+}
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+impl fmt::Display for Point {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "({}, {})", self.x, self.y)
+    }
+}
+
+// if we tried to implement this trait for 'Point' before also implementing the fmt::Display trait for Point, we would get an error
+impl OutlinePrint for Point {}
+
+// lets say we want to implement a trait on a type and neither the trait nor the type are locally defined in our crate
+// we can still do so if we use a so called 'Wrapper'
+
+struct Wrapper(Vec<String>);
+
+// here we can now implement the Display trait on a Vector of Strings even though neither the type Vector or the trait Display are local
+impl fmt::Display for Wrapper {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "[{}]", self.0.join(", "))
+    }
+}
+
 fn main() {
     assert_eq!(
         Point { x: 1, y: 0 } + Point { x: 2, y: 3 },
         Point { x: 3, y: 3 }
     );
+
+    // since we have implemented a fly() method on human, this is what the compiler defaults to
+    let person = Human;
+    // there are three implementations of fly and we default to the one on the struct
+    person.fly();
+    // if we want to call the ones we defined in the traits, we need to specify which one we call
+    Pilot::fly(&person);
+    Wizard::fly(&person);
+
+    // if we want to use the baby_name implementation for Dog that we defined in the 'Animal' trait
+    // we have to use the following syntax because baby_name() does not take a &self parameter
+    println!("A baby dog is called a {}", <Dog as Animal>::baby_name());
+
+    // since we have implemented the Display trait for the Wrapper(Vec<String>), we can now use it in a println! macro
+    let w = Wrapper(vec![String::from("hello"), String::from("world")]);
+    println!("w = {}", w);
 }

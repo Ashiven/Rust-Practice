@@ -1,2 +1,4 @@
 -  `associated types` can be used in the definitions of a trait as placeholder for a type, which the implementor of the method will specify
 -  generic type parameters in trait definitions can have a `default concrete type` specified, which makes it so that implementors of the trait don't need to specify a type
+-  different traits can have methods with the same name and a struct itself may implement a method with the same name as a method defined in a trait for the struct
+-  we can use `fully qualified syntax` to call a method defined in a trait as follows: `<Type as Trait>::Method();`
