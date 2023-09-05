@@ -1,0 +1,4 @@
+-  there are `type aliases` which can help to make code more readable and easier to understand
+-  there is a so called `never type` that is referred to with the `!` keyword
+-  this can be used as the return type of functions that never return
+-  there are `dynamically sized types` allowing us to write code using values whose we can only know at runtime
