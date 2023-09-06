@@ -1,0 +1,4 @@
+-  instead of passing closures to functions you can also pass functions to functions
+-  functions are specified with the type `fn` which should not be confused with the `Fn` trait for closures
+-  functions implement all of the closure traits `Fn`, `FnOnce`, and `FnMut` which is why they can be passed as an argument for a function that would expect a closure
+-  we can return closures by specifiying the return type of the function to be a trait object
