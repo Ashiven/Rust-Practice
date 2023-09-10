@@ -33,4 +33,10 @@ fn main() {
         temp_vec.push(3);
         temp_vec
     }
+
+    // procedural macros
+    // this type of macro acts more similarly to a function
+    // they accept some code as input, operate on it, and produce some code as output
+    // rather than matching matching against patterns and replacing the code
+    // the procedural macros kinds are: derive, attribute-like, and function-like
 }
