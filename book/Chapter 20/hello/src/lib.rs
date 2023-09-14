@@ -10,7 +10,6 @@ pub struct ThreadPool {
     sender: Option<mpsc::Sender<Job>>,
 }
 
-
 impl ThreadPool {
     /// Create a new ThreadPool.
     ///
